@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.buildndeploy</groupId>
-  <artifactId>set</artifactId>
+  <artifactId>setlib</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>set</name>
-  <url>http://maven.apache.org</url>
+  <name>setlib</name>
+  <url>http://www.buildndeploy.com/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
