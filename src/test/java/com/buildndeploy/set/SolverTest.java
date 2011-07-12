@@ -14,5 +14,5 @@ public class SolverTest {
 		assertTrue(Solver.isSet(a, b, c));
 		
 	}
-	
+
 }
