@@ -1,5 +1,7 @@
 package com.buildndeploy.set;
 
+import java.util.EnumSet;
+
 public enum CardShape {
 	DIAMOND, CAPSULE, SQUIGGLE;
 
@@ -9,42 +11,8 @@ public enum CardShape {
 			third = first;
 
 		} else {
-			switch (first) {
-				case DIAMOND:
-					switch (second) {
-						case CAPSULE:
-							third = SQUIGGLE;
-							break;
-						case SQUIGGLE:
-							third = CAPSULE;
-							break;
-					}
-					break;
-					
-				case CAPSULE:
-					switch (second) {
-						case DIAMOND:
-							third = SQUIGGLE;
-							break;
-						case SQUIGGLE:
-							third = DIAMOND;
-							break;
-					}
-					break;
-					
-				case SQUIGGLE:
-					switch (second) {
-						case DIAMOND:
-							third = CAPSULE;
-							break;
-						case CAPSULE:
-							third = DIAMOND;
-							break;
-					}
-					break;
-					
-			}
-
+			EnumSet<CardShape> twoShapes = EnumSet.of(first, second);
+			third = (CardShape) EnumSet.complementOf(twoShapes).toArray()[0];
 		}
 		
 		return third;	}

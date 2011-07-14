@@ -1,5 +1,7 @@
 package com.buildndeploy.set;
 
+import java.util.EnumSet;
+
 public enum CardColor {
 	RED, GREEN, PURPLE;
 
@@ -8,43 +10,9 @@ public enum CardColor {
 		if (first.equals(second)) {
 			third = first;
 
-		} else {
-			switch (first) {
-				case RED:
-					switch (second) {
-						case GREEN:
-							third = PURPLE;
-							break;
-						case PURPLE:
-							third = GREEN;
-							break;
-					}
-					break;
-					
-				case GREEN:
-					switch (second) {
-						case RED:
-							third = PURPLE;
-							break;
-						case PURPLE:
-							third = RED;
-							break;
-					}
-					break;
-					
-				case PURPLE:
-					switch (second) {
-						case RED:
-							third = GREEN;
-							break;
-						case GREEN:
-							third = RED;
-							break;
-					}
-					break;
-					
-			}
-
+		} else {			
+			EnumSet<CardColor> twoColors = EnumSet.of(first, second);
+			third = (CardColor) EnumSet.complementOf(twoColors).toArray()[0];
 		}
 		
 		return third;
