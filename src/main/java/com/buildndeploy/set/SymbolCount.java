@@ -25,4 +25,9 @@ public enum SymbolCount {
 	public static boolean areUnique(SymbolCount a, SymbolCount b, SymbolCount c) {
 		return !a.equals(b) && !a.equals(c) && !b.equals(c);
 	}
+
+	public static boolean isSet(SymbolCount a, SymbolCount b, SymbolCount c) {
+		return (areSimilar(a,b,c) || areUnique(a,b,c));
+	}
+
 }

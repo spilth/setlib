@@ -26,4 +26,9 @@ public enum SymbolShading {
 		return !a.equals(b) && !a.equals(c) && !b.equals(c);
 	}
 
+	public static boolean isSet(SymbolShading a, SymbolShading b, SymbolShading c) {
+		return (areSimilar(a,b,c) || areUnique(a,b,c));
+	}
+
+
 }

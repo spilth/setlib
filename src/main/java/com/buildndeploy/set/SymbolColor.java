@@ -25,4 +25,8 @@ public enum SymbolColor {
 	public static boolean areUnique(SymbolColor a, SymbolColor b, SymbolColor c) {
 		return !a.equals(b) && !a.equals(c) && !b.equals(c);
 	}
+
+	public static boolean isSet(SymbolColor a, SymbolColor b, SymbolColor c) {
+		return (areSimilar(a,b,c) || areUnique(a,b,c));
+	}
 }

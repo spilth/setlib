@@ -25,4 +25,8 @@ public enum SymbolShape {
 	public static boolean areUnique(SymbolShape a, SymbolShape b, SymbolShape c) {
 		return !a.equals(b) && !a.equals(c) && !b.equals(c);
 	}
+
+	public static boolean isSet(SymbolShape a, SymbolShape b, SymbolShape c) {
+		return (areSimilar(a,b,c) || areUnique(a,b,c));
+	}
 }
