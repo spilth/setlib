@@ -17,4 +17,12 @@ public enum CardColor {
 		
 		return third;
 	}
+	
+	public static boolean areSimilar(CardColor a, CardColor b, CardColor c) {
+		return a.equals(b) && b.equals(c);
+	}
+
+	public static boolean areUnique(CardColor a, CardColor b, CardColor c) {
+		return !a.equals(b) && !a.equals(c) && !b.equals(c);
+	}
 }

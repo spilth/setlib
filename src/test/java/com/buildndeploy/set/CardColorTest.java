@@ -1,6 +1,8 @@
 package com.buildndeploy.set;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -23,4 +25,16 @@ public class CardColorTest {
 		assertEquals(CardColor.RED, CardColor.findThirdCardColor(CardColor.PURPLE, CardColor.GREEN));
 	}
 
+	@Test
+	public void colorsAreSimilar() {
+		assertTrue(CardColor.areSimilar(CardColor.RED, CardColor.RED, CardColor.RED));
+		assertTrue(CardColor.areSimilar(CardColor.RED, CardColor.RED, CardColor.RED));
+	}
+	
+	@Test
+	public void colorsAreUnique() {
+		assertTrue(CardColor.areUnique(CardColor.RED, CardColor.GREEN, CardColor.PURPLE));
+		assertFalse(CardColor.areUnique(CardColor.RED, CardColor.GREEN, CardColor.GREEN));
+	}
+	
 }
