@@ -8,9 +8,9 @@ public class SolverTest {
 
 	@Test
 	public void simpleSet() {
-		Card a = new Card(CardCount.ONE, CardColor.RED, CardShape.CAPSULE, CardShading.SOLID);
-		Card b = new Card(CardCount.TWO, CardColor.RED, CardShape.CAPSULE, CardShading.SOLID);
-		Card c = new Card(CardCount.THREE, CardColor.RED, CardShape.CAPSULE, CardShading.SOLID);
+		Card a = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
+		Card b = new Card(SymbolCount.TWO, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
+		Card c = new Card(SymbolCount.THREE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
 		assertTrue(Solver.isSet(a, b, c));
 	}
 	
