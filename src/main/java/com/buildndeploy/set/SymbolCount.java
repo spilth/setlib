@@ -17,4 +17,12 @@ public enum SymbolCount {
 		
 		return third;
 	}
+
+	public static boolean areSimilar(SymbolCount a, SymbolCount b, SymbolCount c) {
+		return a.equals(b) && b.equals(c);
+	}
+
+	public static boolean areUnique(SymbolCount a, SymbolCount b, SymbolCount c) {
+		return !a.equals(b) && !a.equals(c) && !b.equals(c);
+	}
 }

@@ -17,4 +17,13 @@ public enum SymbolShading {
 		
 		return third;
 	}
+
+	public static boolean areSimilar(SymbolShading a, SymbolShading b, SymbolShading c) {
+		return a.equals(b) && b.equals(c);
+	}
+
+	public static boolean areUnique(SymbolShading a, SymbolShading b, SymbolShading c) {
+		return !a.equals(b) && !a.equals(c) && !b.equals(c);
+	}
+
 }

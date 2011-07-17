@@ -1,6 +1,8 @@
 package com.buildndeploy.set;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -22,5 +24,18 @@ public class SymbolShadingTest {
 		assertEquals(SymbolShading.SOLID, SymbolShading.findThirdCardShading(SymbolShading.SHADED, SymbolShading.CLEAR));
 		assertEquals(SymbolShading.SOLID, SymbolShading.findThirdCardShading(SymbolShading.CLEAR, SymbolShading.SHADED));
 	}
+
+	@Test
+	public void shadingAreSimilar() {
+		assertTrue(SymbolShading.areSimilar(SymbolShading.SOLID, SymbolShading.SOLID, SymbolShading.SOLID));
+		assertTrue(SymbolShading.areSimilar(SymbolShading.SOLID, SymbolShading.SOLID, SymbolShading.SOLID));
+	}
+	
+	@Test
+	public void shadingAreUnique() {
+		assertTrue(SymbolShading.areUnique(SymbolShading.SOLID, SymbolShading.SHADED, SymbolShading.CLEAR));
+		assertFalse(SymbolShading.areUnique(SymbolShading.SOLID, SymbolShading.SHADED, SymbolShading.SHADED));
+	}
+
 	
 }
