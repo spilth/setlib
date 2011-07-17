@@ -8,11 +8,10 @@ public class SolverTest {
 
 	@Test
 	public void simpleSet() {
-		Card a = new Card(Card.NUMBER_1, Card.COLOR_RED, Card.SHAPE_CAPSULE, Card.SHADING_SOLID);
-		Card b = new Card(Card.NUMBER_2, Card.COLOR_RED, Card.SHAPE_CAPSULE, Card.SHADING_SOLID);
-		Card c = new Card(Card.NUMBER_3, Card.COLOR_RED, Card.SHAPE_CAPSULE, Card.SHADING_SOLID);
+		Card a = new Card(CardCount.ONE, CardColor.RED, CardShape.CAPSULE, CardShading.SOLID);
+		Card b = new Card(CardCount.TWO, CardColor.RED, CardShape.CAPSULE, CardShading.SOLID);
+		Card c = new Card(CardCount.THREE, CardColor.RED, CardShape.CAPSULE, CardShading.SOLID);
 		assertTrue(Solver.isSet(a, b, c));
-		
 	}
-
+	
 }
