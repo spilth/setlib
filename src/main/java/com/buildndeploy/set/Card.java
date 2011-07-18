@@ -6,6 +6,7 @@ public class Card {
 	private SymbolColor color;
 	private SymbolShape shape;
 	private SymbolShading shading;
+	private String description;
 	
 	@SuppressWarnings("unused")
 	private Card() {}
@@ -15,6 +16,11 @@ public class Card {
 		this.color = color;
 		this.shape = shape;
 		this.shading = shading;		
+		this.description = new StringBuffer().append(count.toString()).append(" ").append(color.toString()).append(" ").append(shading.toString()).append(" ").append(shape.toString()).toString();
+	}
+	
+	public String toString() {
+		return description;
 	}
 
 	public SymbolCount getCount() {
