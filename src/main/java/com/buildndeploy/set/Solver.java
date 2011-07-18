@@ -2,8 +2,11 @@ package com.buildndeploy.set;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Solver {
+	static Logger logger = LoggerFactory.getLogger("Solver");
 
 	public static boolean isSet(Card a, Card b, Card c) {
 		return (
@@ -30,6 +33,7 @@ public class Solver {
 					third = (Card) cards[k];
 					if (isSet(first, second, third)) {
 						sets.add(new int[] {i,j,k});
+						logger.info("Set Found:" + cards[i] + ", "+ cards[j] + ", " + cards[k]);
 					}
 				}
 			}
