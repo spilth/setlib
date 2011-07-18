@@ -5,9 +5,11 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Solver {
-	static Logger logger = LoggerFactory.getLogger("Solver");
+public final class Solver {
+	private static Logger logger = LoggerFactory.getLogger("Solver");
 
+	private Solver(){};
+	
 	public static boolean isSet(Card a, Card b, Card c) {
 		return (
 				SymbolColor.isSet(a.getColor(), b.getColor(), c.getColor()) &&
