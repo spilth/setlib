@@ -40,7 +40,7 @@ public class Deck {
 		List<Card> draw = new ArrayList<Card>();
 		for (int i = 0; i < count; i++) {
 			Card card = cards.remove(0);
-			logger.info(card.toString());
+			logger.debug(card.toString());
 			draw.add(card);
 		}
 		return draw;

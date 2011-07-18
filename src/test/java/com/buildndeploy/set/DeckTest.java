@@ -30,4 +30,5 @@ public class DeckTest {
 		List<Card> cards = deck.draw(12);
 		assertEquals(69, deck.size());
 	}
+	
 }

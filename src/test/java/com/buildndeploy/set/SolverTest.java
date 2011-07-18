@@ -6,9 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SolverTest {
+	private static Logger logger = LoggerFactory.getLogger("Solver");
 
+	
 	@Test
 	public void simpleSet() {
 		Card a = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
@@ -50,4 +54,22 @@ public class SolverTest {
 		assertEquals(1080, Solver.findSets(new Deck().getCards()).size());
 	}
 
+	@Test
+	public void drawHas0to13Sets() {
+		Deck deck;
+		List<Card> cards;
+		List<int []> sets;
+		
+		for (int i = 0; i < 100; i++) {
+			deck = new Deck();
+			deck.shuffle();
+			cards = deck.draw(12);
+			sets = Solver.findSets(cards);
+			logger.info("Sets found: " + sets.size());
+			assertTrue(sets.size() >= 0);
+			assertTrue(sets.size() <= 13);
+		}
+	}
+
+	
 }
