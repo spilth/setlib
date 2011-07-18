@@ -44,4 +44,10 @@ public class SolverTest {
 		assertArrayEquals(new int[] {0,1,3}, Solver.findSets(cards).get(0));
 		assertArrayEquals(new int[] {1,2,4}, Solver.findSets(cards).get(1));
 	}
+	
+	@Test
+	public void deckSetCount() {
+		assertEquals(1080, Solver.findSets(new Deck().getCards()).size());
+	}
+
 }
