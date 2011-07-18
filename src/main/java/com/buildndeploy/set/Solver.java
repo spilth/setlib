@@ -35,7 +35,7 @@ public final class Solver {
 					third = (Card) cards[k];
 					if (isSet(first, second, third)) {
 						sets.add(new int[] {i,j,k});
-						logger.info("Set Found:" + cards[i] + ", "+ cards[j] + ", " + cards[k]);
+						logger.debug("Set Found:" + cards[i] + ", "+ cards[j] + ", " + cards[k]);
 					}
 				}
 			}
