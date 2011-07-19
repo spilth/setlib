@@ -3,8 +3,6 @@ package com.buildndeploy.set;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
 
-import java.util.List;
-
 import org.junit.Test;
 
 
@@ -27,7 +25,7 @@ public class DeckTest {
 	public void draw() {
 		Deck deck = new Deck();
 		deck.shuffle();
-		List<Card> cards = deck.draw(12);
+		deck.draw(12);
 		assertEquals(69, deck.size());
 	}
 	
