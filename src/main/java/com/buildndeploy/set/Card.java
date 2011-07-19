@@ -7,6 +7,7 @@ public class Card {
 	private SymbolShape shape;
 	private SymbolShading shading;
 	private String description;
+	private String imageName;
 	
 	@SuppressWarnings("unused")
 	private Card() {}
@@ -17,6 +18,7 @@ public class Card {
 		this.shape = shape;
 		this.shading = shading;		
 		this.description = new StringBuffer().append(count.toString()).append(" ").append(color.toString()).append(" ").append(shading.toString()).append(" ").append(shape.toString()).toString();
+		this.imageName = new StringBuffer().append(count.ordinal()).append(color.ordinal()).append(shape.ordinal()).append(shading.ordinal()).toString();
 	}
 	
 	public String toString() {
@@ -37,5 +39,9 @@ public class Card {
 
 	public SymbolShading getShading() {
 		return shading;
+	}
+
+	public String getImageName() {
+		return imageName;
 	}
 }
