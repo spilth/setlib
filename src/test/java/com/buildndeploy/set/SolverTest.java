@@ -15,27 +15,27 @@ public class SolverTest {
 	
 	@Test
 	public void simpleSet() {
-		Card a = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card b = new Card(SymbolCount.TWO, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card c = new Card(SymbolCount.THREE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
+		Card a = new Card(Count.ONE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
+		Card b = new Card(Count.TWO, Color.RED, Symbol.CAPSULE, Shading.SOLID);
+		Card c = new Card(Count.THREE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
 		assertTrue(Solver.isSet(a, b, c));
 	}
 
 	@Test
 	public void complexSet() {
-		Card a = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card b = new Card(SymbolCount.TWO, SymbolColor.GREEN, SymbolShape.DIAMOND, SymbolShading.SHADED);
-		Card c = new Card(SymbolCount.THREE, SymbolColor.PURPLE, SymbolShape.SQUIGGLE, SymbolShading.CLEAR);
+		Card a = new Card(Count.ONE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
+		Card b = new Card(Count.TWO, Color.GREEN, Symbol.DIAMOND, Shading.SHADED);
+		Card c = new Card(Count.THREE, Color.PURPLE, Symbol.SQUIGGLE, Shading.CLEAR);
 		assertTrue(Solver.isSet(a, b, c));
 	}
 
 	@Test
 	public void findSet() {
-		Card a = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card b = new Card(SymbolCount.TWO, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card c = new Card(SymbolCount.TWO, SymbolColor.GREEN, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card d = new Card(SymbolCount.THREE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
-		Card e = new Card(SymbolCount.TWO, SymbolColor.PURPLE, SymbolShape.CAPSULE, SymbolShading.SOLID);
+		Card a = new Card(Count.ONE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
+		Card b = new Card(Count.TWO, Color.RED, Symbol.CAPSULE, Shading.SOLID);
+		Card c = new Card(Count.TWO, Color.GREEN, Symbol.CAPSULE, Shading.SOLID);
+		Card d = new Card(Count.THREE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
+		Card e = new Card(Count.TWO, Color.PURPLE, Symbol.CAPSULE, Shading.SOLID);
 
 		List<Card> cards = new ArrayList<Card>();
 		cards.add(a);

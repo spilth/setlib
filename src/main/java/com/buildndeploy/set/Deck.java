@@ -12,10 +12,10 @@ public class Deck {
 	private static Logger logger = LoggerFactory.getLogger("Solver");
 	
 	public Deck() {
-		for (SymbolCount count : SymbolCount.values()) {
-			for (SymbolColor color : SymbolColor.values()) {
-				for (SymbolShading shading : SymbolShading.values()) {
-					for (SymbolShape shape : SymbolShape.values()) {
+		for (Count count : Count.values()) {
+			for (Color color : Color.values()) {
+				for (Shading shading : Shading.values()) {
+					for (Symbol shape : Symbol.values()) {
 						Card card = new Card(count, color, shape, shading);
 						cards.add(card);
 					}	

@@ -2,17 +2,17 @@ package com.buildndeploy.set;
 
 public class Card {
 
-	private SymbolCount count;
-	private SymbolColor color;
-	private SymbolShape shape;
-	private SymbolShading shading;
+	private Count count;
+	private Color color;
+	private Symbol shape;
+	private Shading shading;
 	private String description;
 	private String imageName;
 	
 	@SuppressWarnings("unused")
 	private Card() {}
 	
-	public Card(SymbolCount count, SymbolColor color, SymbolShape shape, SymbolShading shading) {
+	public Card(Count count, Color color, Symbol shape, Shading shading) {
 		this.count = count;
 		this.color = color;
 		this.shape = shape;
@@ -25,19 +25,19 @@ public class Card {
 		return description;
 	}
 
-	public SymbolCount getCount() {
+	public Count getCount() {
 		return count;
 	}
 
-	public SymbolColor getColor() {
+	public Color getColor() {
 		return color;
 	}
 
-	public SymbolShape getShape() {
+	public Symbol getShape() {
 		return shape;
 	}
 
-	public SymbolShading getShading() {
+	public Shading getShading() {
 		return shading;
 	}
 

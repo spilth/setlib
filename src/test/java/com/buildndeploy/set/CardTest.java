@@ -9,16 +9,16 @@ public class CardTest {
 
 	@Test
 	public void cardDescription() {
-		Card card = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.CAPSULE, SymbolShading.SOLID);
+		Card card = new Card(Count.ONE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
 		assertEquals("ONE RED SOLID CAPSULE", card.toString());
 	}
 	
 	@Test
 	public void cardImageName() {
-		Card card = new Card(SymbolCount.ONE, SymbolColor.RED, SymbolShape.DIAMOND, SymbolShading.SOLID);
+		Card card = new Card(Count.ONE, Color.RED, Symbol.DIAMOND, Shading.SOLID);
 		assertEquals("0000", card.getImageName());
 
-		card = new Card(SymbolCount.THREE, SymbolColor.PURPLE, SymbolShape.SQUIGGLE, SymbolShading.CLEAR);
+		card = new Card(Count.THREE, Color.PURPLE, Symbol.SQUIGGLE, Shading.CLEAR);
 		assertEquals("2222", card.getImageName());
 
 	}
