@@ -17,16 +17,4 @@ public enum Symbol {
 		
 		return third;
 	}
-	
-	public static boolean areSimilar(Symbol a, Symbol b, Symbol c) {
-		return a.equals(b) && b.equals(c);
-	}
-
-	public static boolean areUnique(Symbol a, Symbol b, Symbol c) {
-		return !a.equals(b) && !a.equals(c) && !b.equals(c);
-	}
-
-	public static boolean isSet(Symbol a, Symbol b, Symbol c) {
-		return (areSimilar(a,b,c) || areUnique(a,b,c));
-	}
 }

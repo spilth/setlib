@@ -27,14 +27,14 @@ public class SymbolTest {
 
 	@Test
 	public void ShapeAreSimilar() {
-		assertTrue(Symbol.areSimilar(Symbol.DIAMOND, Symbol.DIAMOND, Symbol.DIAMOND));
-		assertTrue(Symbol.areSimilar(Symbol.DIAMOND, Symbol.DIAMOND, Symbol.DIAMOND));
+		assertTrue(Rules.areSimilar(Symbol.DIAMOND, Symbol.DIAMOND, Symbol.DIAMOND));
+		assertTrue(Rules.areSimilar(Symbol.DIAMOND, Symbol.DIAMOND, Symbol.DIAMOND));
 	}
 	
 	@Test
 	public void ShapeAreUnique() {
-		assertTrue(Symbol.areUnique(Symbol.DIAMOND, Symbol.CAPSULE, Symbol.SQUIGGLE));
-		assertFalse(Symbol.areUnique(Symbol.DIAMOND, Symbol.CAPSULE, Symbol.CAPSULE));
+		assertTrue(Rules.areUnique(Symbol.DIAMOND, Symbol.CAPSULE, Symbol.SQUIGGLE));
+		assertFalse(Rules.areUnique(Symbol.DIAMOND, Symbol.CAPSULE, Symbol.CAPSULE));
 	}
 	
 }

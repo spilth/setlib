@@ -17,18 +17,4 @@ public enum Shading {
 		
 		return third;
 	}
-
-	public static boolean areSimilar(Shading a, Shading b, Shading c) {
-		return a.equals(b) && b.equals(c);
-	}
-
-	public static boolean areUnique(Shading a, Shading b, Shading c) {
-		return !a.equals(b) && !a.equals(c) && !b.equals(c);
-	}
-
-	public static boolean isSet(Shading a, Shading b, Shading c) {
-		return (areSimilar(a,b,c) || areUnique(a,b,c));
-	}
-
-
 }

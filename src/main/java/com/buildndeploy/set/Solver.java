@@ -12,10 +12,10 @@ public final class Solver {
 	
 	public static boolean isSet(Card a, Card b, Card c) {
 		return (
-				Color.isSet(a.getColor(), b.getColor(), c.getColor()) &&
-				Count.isSet(a.getCount(), b.getCount(), c.getCount()) &&
-				Shading.isSet(a.getShading(), b.getShading(), c.getShading()) &&
-				Symbol.isSet(a.getShape(), b.getShape(), c.getShape())
+				Rules.isSet(a.getColor(), b.getColor(), c.getColor()) &&
+				Rules.isSet(a.getCount(), b.getCount(), c.getCount()) &&
+				Rules.isSet(a.getShading(), b.getShading(), c.getShading()) &&
+				Rules.isSet(a.getShape(), b.getShape(), c.getShape())
 		);
 
 	}

@@ -27,14 +27,14 @@ public class ShadingTest {
 
 	@Test
 	public void shadingAreSimilar() {
-		assertTrue(Shading.areSimilar(Shading.SOLID, Shading.SOLID, Shading.SOLID));
-		assertTrue(Shading.areSimilar(Shading.SOLID, Shading.SOLID, Shading.SOLID));
+		assertTrue(Rules.areSimilar(Shading.SOLID, Shading.SOLID, Shading.SOLID));
+		assertTrue(Rules.areSimilar(Shading.SOLID, Shading.SOLID, Shading.SOLID));
 	}
 	
 	@Test
 	public void shadingAreUnique() {
-		assertTrue(Shading.areUnique(Shading.SOLID, Shading.SHADED, Shading.CLEAR));
-		assertFalse(Shading.areUnique(Shading.SOLID, Shading.SHADED, Shading.SHADED));
+		assertTrue(Rules.areUnique(Shading.SOLID, Shading.SHADED, Shading.CLEAR));
+		assertFalse(Rules.areUnique(Shading.SOLID, Shading.SHADED, Shading.SHADED));
 	}
 
 	

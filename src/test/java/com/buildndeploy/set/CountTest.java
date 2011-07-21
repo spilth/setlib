@@ -27,14 +27,14 @@ public class CountTest {
 
 	@Test
 	public void countAreSimilar() {
-		assertTrue(Count.areSimilar(Count.ONE, Count.ONE, Count.ONE));
-		assertTrue(Count.areSimilar(Count.ONE, Count.ONE, Count.ONE));
+		assertTrue(Rules.areSimilar(Count.ONE, Count.ONE, Count.ONE));
+		assertTrue(Rules.areSimilar(Count.ONE, Count.ONE, Count.ONE));
 	}
 	
 	@Test
 	public void countAreUnique() {
-		assertTrue(Count.areUnique(Count.ONE, Count.TWO, Count.THREE));
-		assertFalse(Count.areUnique(Count.ONE, Count.TWO, Count.TWO));
+		assertTrue(Rules.areUnique(Count.ONE, Count.TWO, Count.THREE));
+		assertFalse(Rules.areUnique(Count.ONE, Count.TWO, Count.TWO));
 	}
 	
 }

@@ -17,16 +17,4 @@ public enum Color {
 		
 		return third;
 	}
-	
-	public static boolean areSimilar(Color a, Color b, Color c) {
-		return a.equals(b) && b.equals(c);
-	}
-
-	public static boolean areUnique(Color a, Color b, Color c) {
-		return !a.equals(b) && !a.equals(c) && !b.equals(c);
-	}
-
-	public static boolean isSet(Color a, Color b, Color c) {
-		return (areSimilar(a,b,c) || areUnique(a,b,c));
-	}
 }

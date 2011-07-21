@@ -27,14 +27,14 @@ public class ColorTest {
 
 	@Test
 	public void colorsAreSimilar() {
-		assertTrue(Color.areSimilar(Color.RED, Color.RED, Color.RED));
-		assertTrue(Color.areSimilar(Color.RED, Color.RED, Color.RED));
+		assertTrue(Rules.areSimilar(Color.RED, Color.RED, Color.RED));
+		assertTrue(Rules.areSimilar(Color.RED, Color.RED, Color.RED));
 	}
 	
 	@Test
 	public void colorsAreUnique() {
-		assertTrue(Color.areUnique(Color.RED, Color.GREEN, Color.PURPLE));
-		assertFalse(Color.areUnique(Color.RED, Color.GREEN, Color.GREEN));
+		assertTrue(Rules.areUnique(Color.RED, Color.GREEN, Color.PURPLE));
+		assertFalse(Rules.areUnique(Color.RED, Color.GREEN, Color.GREEN));
 	}
 	
 }
