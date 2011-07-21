@@ -20,21 +20,21 @@ public final class Solver {
 	}
 
 	public static List<int[]> findSets(List<Card> cardList) {
-		List<int[]> sets = new ArrayList<int[]>();
-		
-		Object[] cards = cardList.toArray();
-		
+		List<int[]> sets = new ArrayList<int[]>();		
+
 		Card first,second,third;
+
+		int cardCount = cardList.size();
 		
-		for (int firstIndex = 0; firstIndex <cards.length; firstIndex++) {
-			for (int secondIndex = firstIndex+1; secondIndex < cards.length; secondIndex++) {
-				for (int thirdIndex = secondIndex+1; thirdIndex < cards.length ; thirdIndex++) {
-					first = (Card) cards[firstIndex];
-					second = (Card) cards[secondIndex];
-					third = (Card) cards[thirdIndex];
+		for (int firstIndex = 0; firstIndex <cardCount; firstIndex++) {
+			for (int secondIndex = firstIndex+1; secondIndex < cardCount; secondIndex++) {
+				for (int thirdIndex = secondIndex+1; thirdIndex < cardCount ; thirdIndex++) {
+					first = cardList.get(firstIndex);
+					second = cardList.get(secondIndex);
+					third = cardList.get(thirdIndex);
 					if (isSet(first, second, third)) {
 						sets.add(new int[] {firstIndex,secondIndex,thirdIndex});
-						logger.debug("Set Found:" + cards[firstIndex] + ", "+ cards[secondIndex] + ", " + cards[thirdIndex]);
+						logger.debug("Set Found:" + first + ", "+ second + ", " + third);
 					}
 				}
 			}
