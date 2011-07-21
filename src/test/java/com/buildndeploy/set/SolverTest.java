@@ -6,13 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class SolverTest {
-	private static Logger logger = LoggerFactory.getLogger("Solver");
-
-	
+public class SolverTest {	
 	@Test
 	public void simpleSet() {
 		Card a = new Card(Count.ONE, Color.RED, Symbol.CAPSULE, Shading.SOLID);
@@ -65,7 +60,6 @@ public class SolverTest {
 			deck.shuffle();
 			cards = deck.draw(12);
 			sets = Solver.findSets(cards);
-			logger.info("Sets found: " + sets.size());
 			assertTrue(sets.size() >= 0);
 			assertTrue(sets.size() <= 13);
 		}
