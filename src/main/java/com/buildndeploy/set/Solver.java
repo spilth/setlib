@@ -10,14 +10,13 @@ public final class Solver {
 
 	private Solver(){};
 	
-	public static boolean isSet(Card a, Card b, Card c) {
+	public static boolean isSet(Card first, Card second, Card third) {
 		return (
-				Rules.isSet(a.getColor(), b.getColor(), c.getColor()) &&
-				Rules.isSet(a.getCount(), b.getCount(), c.getCount()) &&
-				Rules.isSet(a.getShading(), b.getShading(), c.getShading()) &&
-				Rules.isSet(a.getShape(), b.getShape(), c.getShape())
+				Rules.isSet(first.getColor(), second.getColor(), third.getColor()) &&
+				Rules.isSet(first.getCount(), second.getCount(), third.getCount()) &&
+				Rules.isSet(first.getShading(), second.getShading(), third.getShading()) &&
+				Rules.isSet(first.getShape(), second.getShape(), third.getShape())
 		);
-
 	}
 
 	public static List<int[]> findSets(List<Card> cardList) {
@@ -27,15 +26,15 @@ public final class Solver {
 		
 		Card first,second,third;
 		
-		for (int i = 0; i <cards.length; i++) {
-			for (int j = i+1; j < cards.length; j++) {
-				for (int k = j+1; k < cards.length ; k++) {
-					first = (Card) cards[i];
-					second = (Card) cards[j];
-					third = (Card) cards[k];
+		for (int firstIndex = 0; firstIndex <cards.length; firstIndex++) {
+			for (int secondIndex = firstIndex+1; secondIndex < cards.length; secondIndex++) {
+				for (int thirdIndex = secondIndex+1; thirdIndex < cards.length ; thirdIndex++) {
+					first = (Card) cards[firstIndex];
+					second = (Card) cards[secondIndex];
+					third = (Card) cards[thirdIndex];
 					if (isSet(first, second, third)) {
-						sets.add(new int[] {i,j,k});
-						logger.debug("Set Found:" + cards[i] + ", "+ cards[j] + ", " + cards[k]);
+						sets.add(new int[] {firstIndex,secondIndex,thirdIndex});
+						logger.debug("Set Found:" + cards[firstIndex] + ", "+ cards[secondIndex] + ", " + cards[thirdIndex]);
 					}
 				}
 			}
