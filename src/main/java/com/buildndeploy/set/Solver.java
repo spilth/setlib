@@ -2,12 +2,8 @@ package com.buildndeploy.set;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public final class Solver {
-	private static Logger logger = LoggerFactory.getLogger("Solver");
-
 	private Solver(){};
 	
 	public static boolean isSet(Card first, Card second, Card third) {
@@ -34,14 +30,12 @@ public final class Solver {
 					third = cardList.get(thirdIndex);
 					if (isSet(first, second, third)) {
 						sets.add(new int[] {firstIndex,secondIndex,thirdIndex});
-						logger.debug("Set Found:" + first + ", "+ second + ", " + third);
 					}
 				}
 			}
 		}
 
 		return sets;
-
 	}
 
 }
