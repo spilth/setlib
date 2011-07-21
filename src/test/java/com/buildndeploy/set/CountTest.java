@@ -10,19 +10,19 @@ public class CountTest {
 
 	@Test
 	public void similarShading() {
-		assertEquals(Count.ONE, Count.findThirdCardCount(Count.ONE, Count.ONE));
-		assertEquals(Count.TWO, Count.findThirdCardCount(Count.TWO, Count.TWO));
-		assertEquals(Count.THREE, Count.findThirdCardCount(Count.THREE, Count.THREE));
+		assertEquals(Count.ONE, Count.findThird(Count.ONE, Count.ONE));
+		assertEquals(Count.TWO, Count.findThird(Count.TWO, Count.TWO));
+		assertEquals(Count.THREE, Count.findThird(Count.THREE, Count.THREE));
 	}
 
 	@Test
 	public void disimilarCounts() {
-		assertEquals(Count.TWO, Count.findThirdCardCount(Count.ONE, Count.THREE));
-		assertEquals(Count.TWO, Count.findThirdCardCount(Count.THREE, Count.ONE));
-		assertEquals(Count.THREE, Count.findThirdCardCount(Count.TWO, Count.ONE));
-		assertEquals(Count.THREE, Count.findThirdCardCount(Count.ONE, Count.TWO));
-		assertEquals(Count.ONE, Count.findThirdCardCount(Count.TWO, Count.THREE));
-		assertEquals(Count.ONE, Count.findThirdCardCount(Count.THREE, Count.TWO));
+		assertEquals(Count.TWO, Count.findThird(Count.ONE, Count.THREE));
+		assertEquals(Count.TWO, Count.findThird(Count.THREE, Count.ONE));
+		assertEquals(Count.THREE, Count.findThird(Count.TWO, Count.ONE));
+		assertEquals(Count.THREE, Count.findThird(Count.ONE, Count.TWO));
+		assertEquals(Count.ONE, Count.findThird(Count.TWO, Count.THREE));
+		assertEquals(Count.ONE, Count.findThird(Count.THREE, Count.TWO));
 	}
 
 	@Test

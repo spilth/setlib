@@ -5,7 +5,7 @@ import java.util.EnumSet;
 public enum Count {
 	ONE, TWO, THREE;
 	
-	public static Count findThirdCardCount(Count first, Count second) {
+	public static Count findThird(Count first, Count second) {
 		Count third = null;
 		if (first.equals(second)) {
 			third = first;

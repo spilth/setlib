@@ -10,19 +10,19 @@ public class ColorTest {
 
 	@Test
 	public void similarColors() {
-		assertEquals(Color.RED, Color.findThirdCardColor(Color.RED, Color.RED));
-		assertEquals(Color.GREEN, Color.findThirdCardColor(Color.GREEN, Color.GREEN));
-		assertEquals(Color.PURPLE, Color.findThirdCardColor(Color.PURPLE, Color.PURPLE));
+		assertEquals(Color.RED, Color.findThird(Color.RED, Color.RED));
+		assertEquals(Color.GREEN, Color.findThird(Color.GREEN, Color.GREEN));
+		assertEquals(Color.PURPLE, Color.findThird(Color.PURPLE, Color.PURPLE));
 	}
 
 	@Test
 	public void disimilarColors() {
-		assertEquals(Color.GREEN, Color.findThirdCardColor(Color.RED, Color.PURPLE));
-		assertEquals(Color.GREEN, Color.findThirdCardColor(Color.PURPLE, Color.RED));
-		assertEquals(Color.PURPLE, Color.findThirdCardColor(Color.GREEN, Color.RED));
-		assertEquals(Color.PURPLE, Color.findThirdCardColor(Color.RED, Color.GREEN));
-		assertEquals(Color.RED, Color.findThirdCardColor(Color.GREEN, Color.PURPLE));
-		assertEquals(Color.RED, Color.findThirdCardColor(Color.PURPLE, Color.GREEN));
+		assertEquals(Color.GREEN, Color.findThird(Color.RED, Color.PURPLE));
+		assertEquals(Color.GREEN, Color.findThird(Color.PURPLE, Color.RED));
+		assertEquals(Color.PURPLE, Color.findThird(Color.GREEN, Color.RED));
+		assertEquals(Color.PURPLE, Color.findThird(Color.RED, Color.GREEN));
+		assertEquals(Color.RED, Color.findThird(Color.GREEN, Color.PURPLE));
+		assertEquals(Color.RED, Color.findThird(Color.PURPLE, Color.GREEN));
 	}
 
 	@Test

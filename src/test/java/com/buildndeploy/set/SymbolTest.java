@@ -10,19 +10,19 @@ public class SymbolTest {
 
 	@Test
 	public void similarShapes() {
-		assertEquals(Symbol.DIAMOND, Symbol.findThirdCardShape(Symbol.DIAMOND, Symbol.DIAMOND));
-		assertEquals(Symbol.CAPSULE, Symbol.findThirdCardShape(Symbol.CAPSULE, Symbol.CAPSULE));
-		assertEquals(Symbol.SQUIGGLE, Symbol.findThirdCardShape(Symbol.SQUIGGLE, Symbol.SQUIGGLE));
+		assertEquals(Symbol.DIAMOND, Symbol.findThird(Symbol.DIAMOND, Symbol.DIAMOND));
+		assertEquals(Symbol.CAPSULE, Symbol.findThird(Symbol.CAPSULE, Symbol.CAPSULE));
+		assertEquals(Symbol.SQUIGGLE, Symbol.findThird(Symbol.SQUIGGLE, Symbol.SQUIGGLE));
 	}
 
 	@Test
 	public void disimilarShapes() {
-		assertEquals(Symbol.CAPSULE, Symbol.findThirdCardShape(Symbol.DIAMOND, Symbol.SQUIGGLE));
-		assertEquals(Symbol.CAPSULE, Symbol.findThirdCardShape(Symbol.SQUIGGLE, Symbol.DIAMOND));
-		assertEquals(Symbol.SQUIGGLE, Symbol.findThirdCardShape(Symbol.CAPSULE, Symbol.DIAMOND));
-		assertEquals(Symbol.SQUIGGLE, Symbol.findThirdCardShape(Symbol.DIAMOND, Symbol.CAPSULE));
-		assertEquals(Symbol.DIAMOND, Symbol.findThirdCardShape(Symbol.CAPSULE, Symbol.SQUIGGLE));
-		assertEquals(Symbol.DIAMOND, Symbol.findThirdCardShape(Symbol.SQUIGGLE, Symbol.CAPSULE));
+		assertEquals(Symbol.CAPSULE, Symbol.findThird(Symbol.DIAMOND, Symbol.SQUIGGLE));
+		assertEquals(Symbol.CAPSULE, Symbol.findThird(Symbol.SQUIGGLE, Symbol.DIAMOND));
+		assertEquals(Symbol.SQUIGGLE, Symbol.findThird(Symbol.CAPSULE, Symbol.DIAMOND));
+		assertEquals(Symbol.SQUIGGLE, Symbol.findThird(Symbol.DIAMOND, Symbol.CAPSULE));
+		assertEquals(Symbol.DIAMOND, Symbol.findThird(Symbol.CAPSULE, Symbol.SQUIGGLE));
+		assertEquals(Symbol.DIAMOND, Symbol.findThird(Symbol.SQUIGGLE, Symbol.CAPSULE));
 	}
 
 	@Test

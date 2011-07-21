@@ -5,7 +5,7 @@ import java.util.EnumSet;
 public enum Symbol {
 	DIAMOND, CAPSULE, SQUIGGLE;
 
-	public static Symbol findThirdCardShape(Symbol first, Symbol second) {
+	public static Symbol findThird(Symbol first, Symbol second) {
 		Symbol third = null;
 		if (first.equals(second)) {
 			third = first;

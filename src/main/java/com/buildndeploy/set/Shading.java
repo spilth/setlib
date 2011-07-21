@@ -5,7 +5,7 @@ import java.util.EnumSet;
 public enum Shading {
 	SOLID, SHADED, CLEAR;
 
-	public static Shading findThirdCardShading(Shading first, Shading second) {
+	public static Shading findThird(Shading first, Shading second) {
 		Shading third = null;
 		if (first.equals(second)) {
 			third = first;

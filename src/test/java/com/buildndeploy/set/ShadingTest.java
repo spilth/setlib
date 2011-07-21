@@ -10,19 +10,19 @@ public class ShadingTest {
 
 	@Test
 	public void similarShading() {
-		assertEquals(Shading.SOLID, Shading.findThirdCardShading(Shading.SOLID, Shading.SOLID));
-		assertEquals(Shading.SHADED, Shading.findThirdCardShading(Shading.SHADED, Shading.SHADED));
-		assertEquals(Shading.CLEAR, Shading.findThirdCardShading(Shading.CLEAR, Shading.CLEAR));
+		assertEquals(Shading.SOLID, Shading.findThird(Shading.SOLID, Shading.SOLID));
+		assertEquals(Shading.SHADED, Shading.findThird(Shading.SHADED, Shading.SHADED));
+		assertEquals(Shading.CLEAR, Shading.findThird(Shading.CLEAR, Shading.CLEAR));
 	}
 
 	@Test
 	public void disimilarColors() {
-		assertEquals(Shading.SHADED, Shading.findThirdCardShading(Shading.SOLID, Shading.CLEAR));
-		assertEquals(Shading.SHADED, Shading.findThirdCardShading(Shading.CLEAR, Shading.SOLID));
-		assertEquals(Shading.CLEAR, Shading.findThirdCardShading(Shading.SHADED, Shading.SOLID));
-		assertEquals(Shading.CLEAR, Shading.findThirdCardShading(Shading.SOLID, Shading.SHADED));
-		assertEquals(Shading.SOLID, Shading.findThirdCardShading(Shading.SHADED, Shading.CLEAR));
-		assertEquals(Shading.SOLID, Shading.findThirdCardShading(Shading.CLEAR, Shading.SHADED));
+		assertEquals(Shading.SHADED, Shading.findThird(Shading.SOLID, Shading.CLEAR));
+		assertEquals(Shading.SHADED, Shading.findThird(Shading.CLEAR, Shading.SOLID));
+		assertEquals(Shading.CLEAR, Shading.findThird(Shading.SHADED, Shading.SOLID));
+		assertEquals(Shading.CLEAR, Shading.findThird(Shading.SOLID, Shading.SHADED));
+		assertEquals(Shading.SOLID, Shading.findThird(Shading.SHADED, Shading.CLEAR));
+		assertEquals(Shading.SOLID, Shading.findThird(Shading.CLEAR, Shading.SHADED));
 	}
 
 	@Test

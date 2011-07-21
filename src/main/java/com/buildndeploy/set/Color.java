@@ -5,7 +5,7 @@ import java.util.EnumSet;
 public enum Color {
 	RED, GREEN, PURPLE;
 
-	public static Color findThirdCardColor(Color first, Color second) {
+	public static Color findThird(Color first, Color second) {
 		Color third = null;
 		if (first.equals(second)) {
 			third = first;
