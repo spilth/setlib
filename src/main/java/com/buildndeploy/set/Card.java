@@ -12,13 +12,13 @@ public class Card {
 	@SuppressWarnings("unused")
 	private Card() {}
 	
-	public Card(Count count, Color color, Symbol shape, Shading shading) {
+	public Card(Count count, Color color, Symbol symbol, Shading shading) {
 		this.count = count;
 		this.color = color;
-		this.shape = shape;
+		this.shape = symbol;
 		this.shading = shading;		
-		this.description = new StringBuffer().append(count.toString()).append(" ").append(color.toString()).append(" ").append(shading.toString()).append(" ").append(shape.toString()).toString();
-		this.imageName = new StringBuffer().append(count.ordinal()).append(color.ordinal()).append(shape.ordinal()).append(shading.ordinal()).toString();
+		this.description = new StringBuffer().append(count.toString()).append(" ").append(color.toString()).append(" ").append(shading.toString()).append(" ").append(symbol.toString()).toString();
+		this.imageName = new StringBuffer().append(count.ordinal()).append(color.ordinal()).append(symbol.ordinal()).append(shading.ordinal()).toString();
 	}
 	
 	public String toString() {
