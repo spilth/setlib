@@ -36,9 +36,9 @@ public class Deck {
 		Collections.shuffle(cards);
 	}
 
-	public List<Card> draw(int count) {
+	public List<Card> draw(int drawNumber) {
 		List<Card> draw = new ArrayList<Card>();
-		for (int i = 0; i < count; i++) {
+		for (int drawCount = 0; drawCount < drawNumber; drawCount++) {
 			Card card = cards.remove(0);
 			draw.add(card);
 		}
