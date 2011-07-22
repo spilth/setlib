@@ -1,7 +1,8 @@
 package com.buildndeploy.set;
 
-public class Rules {
-
+public final class Rules {
+	private Rules(){}
+	
 	public static boolean isSet(Object first, Object second, Object third) {
 		return (Rules.areSimilar(first,second,third) || Rules.areUnique(first,second,third));
 	}
