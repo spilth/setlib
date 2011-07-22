@@ -40,8 +40,8 @@ public class SolverTest {
 		cards.add(e);
 		
 		assertEquals(2, Solver.findSets(cards).size());
-		assertArrayEquals(new int[] {0,1,3}, Solver.findSets(cards).get(0));
-		assertArrayEquals(new int[] {1,2,4}, Solver.findSets(cards).get(1));
+		assertEquals(new Set(a, b, d), Solver.findSets(cards).get(0));
+		assertEquals(new Set(b, c, e), Solver.findSets(cards).get(1));
 	}
 	
 	@Test
@@ -53,7 +53,7 @@ public class SolverTest {
 	public void drawHas0to13Sets() {
 		Deck deck;
 		List<Card> cards;
-		List<int []> sets;
+		List<Set> sets;
 		
 		for (int i = 0; i < 100; i++) {
 			deck = new Deck();

@@ -15,8 +15,8 @@ public final class Solver {
 		);
 	}
 
-	public static List<int[]> findSets(List<Card> cardList) {
-		List<int[]> sets = new ArrayList<int[]>();		
+	public static List<Set> findSets(List<Card> cardList) {
+		List<Set> sets = new ArrayList<Set>();		
 
 		Card first,second,third;
 
@@ -29,7 +29,7 @@ public final class Solver {
 					second = cardList.get(secondIndex);
 					third = cardList.get(thirdIndex);
 					if (isSet(first, second, third)) {
-						sets.add(new int[] {firstIndex,secondIndex,thirdIndex});
+						sets.add(new Set(first, second, third));
 					}
 				}
 			}
