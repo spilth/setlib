@@ -17,8 +17,18 @@ public class Card {
 		this.color = color;
 		this.shape = symbol;
 		this.shading = shading;		
-		this.description = new StringBuffer().append(count.toString()).append(" ").append(color.toString()).append(" ").append(shading.toString()).append(" ").append(symbol.toString()).toString();
-		this.imageName = new StringBuffer().append(count.ordinal()).append(color.ordinal()).append(symbol.ordinal()).append(shading.ordinal()).toString();
+		this.description = generateName(count, color, symbol, shading);
+		this.imageName = generateImageName(count, color, symbol, shading);
+	}
+
+	private String generateImageName(Count count, Color color, Symbol symbol,
+			Shading shading) {
+		return new StringBuffer().append(count.ordinal()).append(color.ordinal()).append(symbol.ordinal()).append(shading.ordinal()).toString();
+	}
+
+	private String generateName(Count count, Color color, Symbol symbol,
+			Shading shading) {
+		return new StringBuffer().append(count.toString()).append(" ").append(color.toString()).append(" ").append(shading.toString()).append(" ").append(symbol.toString()).toString();
 	}
 	
 	public String toString() {
