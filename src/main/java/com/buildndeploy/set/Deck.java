@@ -8,6 +8,10 @@ public class Deck {
 	private List<Card> cards = new ArrayList<Card>();
 	
 	public Deck() {
+		generateStandardSetDeck();
+	}
+
+	private void generateStandardSetDeck() {
 		for (Count count : Count.values()) {
 			for (Color color : Color.values()) {
 				for (Shading shading : Shading.values()) {
